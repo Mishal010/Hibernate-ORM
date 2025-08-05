@@ -1,14 +1,12 @@
 package org.example;
 
 //import jakarta.persistence.Embeddable;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.ManyToMany;
-import jakarta.persistence.ManyToOne;
+import jakarta.persistence.*;
 
 import java.util.List;
 
 @Entity
+@Cacheable
 public class Laptop {
     @Id
     private int lapid;
@@ -17,17 +15,17 @@ public class Laptop {
     private int ram;
 //    @ManyToOne
 //    private Alien alien;
-    @ManyToMany(mappedBy = "laptops")
-    private List<Alien> aliens;
+//    @ManyToMany(mappedBy = "laptops")
+//    private List<Alien> aliens;
 
 
-    public List<Alien> getAliens() {
-        return aliens;
-    }
-
-    public void setAliens(List<Alien> aliens) {
-        this.aliens = aliens;
-    }
+//    public List<Alien> getAliens() {
+//        return aliens;
+//    }
+//
+//    public void setAliens(List<Alien> aliens) {
+//        this.aliens = aliens;
+//    }
 
     public int getLapid() {
         return lapid;
